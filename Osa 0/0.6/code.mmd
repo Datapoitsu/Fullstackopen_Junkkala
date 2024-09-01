@@ -1,0 +1,10 @@
+sequenceDiagram
+    participant browser
+    participant server
+
+    Note over browser: User submits data
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+    Note over browser: browser updates local HTML to show the added data
+    Note over server: Server updates json file
+    Note over browser,server: Note: browser doesn't update before page is updated
+    Note over browser,server: Note: "One page" design is just an illusion
